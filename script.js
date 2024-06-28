@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () =>{
             document.getElementById('#productPicture').width = '400';
             document.getElementById('#productDescription').textContent = `${data[count].description}`;
             document.getElementById('#productPrice').textContent = `Price: $${data[count].price}`;
+        }).catch((err)=>{ // 2.) Improve Error handling
+            console.log(`There seems to be an error. Make sure you are using a server! Ex. python, python3, or http-server. \n ${err}`);
+            document.getElementById('#loadingMessage').textContent = 'Sorry, there was an error retrieving product data! Try again later.';
         })
     }
 })
