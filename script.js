@@ -22,13 +22,14 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
     const previousBTN = document.getElementById('previousBTN') // 4a.) Navigation Buttons for Products: Previous
     previousBTN.addEventListener('click', function(){
-        call(count)
-        --count
+        count = (count > 0) ? --count : 21; // 5a.) Dynamic Data Handling: for previousBTN
+        call(count);
+        
     })
     const nextBTN = document.getElementById('#nextBTN') // 4b.) Navigation Buttons for Products: Next
     nextBTN.addEventListener('click', function(){
-        call(count)
-        ++count
+        count = (count < 21) ? ++count : 0; // 5b.) Dynamic Data Handling: for nextBTN
+        call(count);
+         
     })
-
 })
