@@ -1,8 +1,8 @@
 // U86364709 CC13
 
 // 1.) Fetch and Display Products
+let count = 0;
 document.addEventListener('DOMContentLoaded', () =>{
-    let count = 0;
     function call(count){
         const request = fetch('https://course-api.com/react-store-products').then((response)=>{
             return response.json();
@@ -20,4 +20,15 @@ document.addEventListener('DOMContentLoaded', () =>{
             document.getElementById('#loadingMessage').textContent= ''; // Removes error message from web page once successful!
         })
     }
+    const previousBTN = document.getElementById('previousBTN') // 4a.) Navigation Buttons for Products: Previous
+    previousBTN.addEventListener('click', function(){
+        call(count)
+        --count
+    })
+    const nextBTN = document.getElementById('#nextBTN') // 4b.) Navigation Buttons for Products: Next
+    nextBTN.addEventListener('click', function(){
+        call(count)
+        ++count
+    })
+
 })
