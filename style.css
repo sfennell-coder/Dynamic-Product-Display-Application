@@ -1,0 +1,29 @@
+/* 6.) Styling and Presentation*/
+
+body{
+    background-color: gray;
+}
+
+h2{
+    font-style:italics;
+    color:rgb(25, 61, 25);
+}
+
+h4{
+    font-style:italics;
+    color: rgb(33, 130, 33);
+}
+p{
+    font-style: italic;
+}
+
+button {
+    background-color: rgb(25, 61, 25);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
